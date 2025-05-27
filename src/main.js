@@ -18,7 +18,7 @@ searchBtn.addEventListener("click", async (e) => {
   }
 
   searchBtn.setAttribute("disabled", true);
-  searchBtn.innerHTML = "wait...";
+  searchBtn.innerHTML = `<i class="fa-solid fa-hourglass-half"></i>`;
   try {
     const { name, country } = await predictname(fullname);
     const { country_id, probability } = country[0];
