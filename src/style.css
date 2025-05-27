@@ -15,15 +15,16 @@ html {
   --color-black-main: #000000;
 }
 body {
-  background: var(--color-grey);
+  background: var(--color-grey);
   font-family: var(--primary-font);
   height: 100vh;
 }
 .nationalize-header {
-  position: relative;
+  position: fixed;
   top: 0;
+  width: 100%;
   background: var(--color-grey-dark);
-  padding-inline-start: 7rem;
+  padding-inline: 7rem 2rem;
   display: flex;
   justify-content: space-between;
 }
@@ -44,4 +45,39 @@ body {
 .nationalize-header-socials a {
   color: var(--color-black-main);
   text-decoration: none;
+}
+
+.natinalize-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.nationalize-body-heading {
+  text-align: center;
+  font-size: 5rem;
+  width: 40%;
+  padding-block: 5rem;
+}
+.natinalize-body-input_search input {
+  font: inherit;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+}
+.natinalize-body-input_search button {
+  font: inherit;
+  background: var(--color-nationalizegreen);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 4rem;
+}
+.nationalize-body-output {
+  padding-block: 2rem;
+  font-size: 2rem;
+  text-align: center;
 }
