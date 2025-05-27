@@ -24,7 +24,7 @@ searchBtn.addEventListener("click", async (e) => {
     const { country_id, probability } = country[0];
     const getCountryNames = new Intl.DisplayNames(["en"], { type: "region" });
 
-    output.innerHTML = `<span>${name}</span> is from <span>${getCountryNames.of(country_id)}</span>  with  certainty of <span>${Math.floor(probability * 100)}</span>`;
+    output.innerHTML = `<span>${name}</span> is from <span>${getCountryNames.of(country_id)}</span>  with  certainty of <span>${Math.floor(probability * 100)}%</span>`;
   } catch (e) {
     output.innerText = "something is wrong try again later";
     console.log(e);

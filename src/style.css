@@ -8,9 +8,10 @@ html {
 }
 :root {
   --primary-font: "Cascadia Mono", sans-serif;
-  --color-yellow-green: #aad424;
+  --color-white: #fff;
   --color-grey: #d8dbdd;
-  --color-grey-dark: #797877;
+  --color-grey-dark: #cacaca;
+  --color-grey-daker: #8c8c8c;
   --color-nationalizegreen: #00b050;
   --color-black-main: #000000;
 }
@@ -32,7 +33,8 @@ body {
 .nationalize-headerlogo {
   background: var(--color-nationalizegreen);
   padding: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
+  color: var(--color-white);
 }
 
 .nationalize-header-socials {
@@ -79,6 +81,7 @@ body {
 }
 .nationalize-body-output {
   padding-block: 2rem;
+  color: var(--color-grey-daker);
   font-size: 2rem;
   text-align: center;
 }
@@ -87,7 +90,8 @@ button:disabled {
   background: var(--color-grey-dark);
 }
 .nationalize-body-output span {
-  font-weight: 400;
+  font-weight: 900;
+  color: var(--color-black-main);
 }
 @media screen and (max-width: 740px) {
   .nationalize-body-heading {
