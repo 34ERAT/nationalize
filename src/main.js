@@ -10,23 +10,26 @@ const predictname = async (personName) => {
 };
 
 searchBtn.addEventListener("click", async (e) => {
-  const name = searchInput.value;
+  const fullname = searchInput.value;
   output.innerText = "";
-  if (name === "") {
+  if (fullname === "") {
     output.innerText = "can not be empty";
     return;
   }
 
   searchBtn.setAttribute("disabled", true);
+  searchBtn.innerHTML = "wait...";
   try {
-    const { name, country } = await predictname(name);
+    const { name, country } = await predictname(fullname);
     const { country_id, probability } = country[0];
     const getCountryNames = new Intl.DisplayNames(["en"], { type: "region" });
 
-    output.innerHTML = `<span>${name}</span> is from <span>${getCountryNames.of(country_id)}</span>  with  certainty of <span>${probability * 100}</span>`;
+    output.innerHTML = `<span>${name}</span> is from <span>${getCountryNames.of(country_id)}</span>  with  certainty of <span>${Math.floor(probability * 100)}</span>`;
   } catch (e) {
     output.innerText = "something is wrong try again later";
+    console.log(e);
   } finally {
+    searchBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i>`;
     searchBtn.removeAttribute("disabled");
   }
 });

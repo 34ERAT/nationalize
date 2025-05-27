@@ -58,7 +58,7 @@ body {
 .nationalize-body-heading {
   text-align: center;
   font-size: 5rem;
-  width: 40%;
+  width: 50%rem;
   padding-block: 5rem;
 }
 .natinalize-body-input_search input {
@@ -75,6 +75,7 @@ body {
   padding: 1rem 2rem;
   font-size: 2rem;
   border-radius: 4rem;
+  transition: all 0.5s;
 }
 .nationalize-body-output {
   padding-block: 2rem;
@@ -82,6 +83,20 @@ body {
   text-align: center;
 }
 
+button:disabled {
+  background: var(--color-grey-dark);
+}
 .nationalize-body-output span {
   font-weight: 400;
+}
+@media screen and (max-width: 740px) {
+  .nationalize-body-heading {
+    font-size: 3rem;
+    padding-block: 3rem;
+    width: 90%;
+  }
+
+  .nationalize-header {
+    padding-inline: 1rem 1rem;
+  }
 }
