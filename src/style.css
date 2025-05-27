@@ -14,3 +14,34 @@ html {
   --color-nationalizegreen: #00b050;
   --color-black-main: #000000;
 }
+body {
+  background: var(--color-grey);
+  font-family: var(--primary-font);
+  height: 100vh;
+}
+.nationalize-header {
+  position: relative;
+  top: 0;
+  background: var(--color-grey-dark);
+  padding-inline-start: 7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nationalize-headerlogo {
+  background: var(--color-nationalizegreen);
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+.nationalize-header-socials {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.nationalize-header-socials a {
+  color: var(--color-black-main);
+  text-decoration: none;
+}
