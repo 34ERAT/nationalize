@@ -15,6 +15,10 @@ html {
   --color-nationalizegreen: #00b050;
   --color-black-main: #000000;
 }
+::selection {
+  background-color: var(--color-nationalizegreen);
+  color: var(--color-grey);
+}
 body {
   background: var(--color-grey);
   font-family: var(--primary-font);
@@ -69,6 +73,7 @@ body {
   padding: 1rem 2rem;
   border-radius: 1rem;
   border: none;
+  box-shadow: 0px 0px 30px 18px rgba(0, 0, 0, 0.1);
 }
 .natinalize-body-input_search button {
   font: inherit;
@@ -78,6 +83,7 @@ body {
   font-size: 2rem;
   border-radius: 4rem;
   transition: all 0.5s;
+  box-shadow: 0px 0px 30px 18px rgba(0, 0, 0, 0.1);
 }
 .nationalize-body-output {
   padding-block: 2rem;
